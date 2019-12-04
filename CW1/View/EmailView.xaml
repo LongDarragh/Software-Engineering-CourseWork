@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="CW1.View.EmailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CW1.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1100">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="540"/>
+            <ColumnDefinition Width="540"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel  Grid.Column="0" Margin="5 5 5 5">
+            <Border DockPanel.Dock="Top"  CornerRadius="15" Background="LightBlue" Margin="15" VerticalAlignment="Top">
+                <StackPanel Orientation="vertical">
+                    <WrapPanel>
+                        <Label Content="Style : " Height="50" FontSize="20" FontWeight="Bold" Foreground="Black" DockPanel.Dock="Top"  VerticalContentAlignment="Center"/>
+                        <Label DockPanel.Dock="Top" Foreground="White" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Type}" FontSize="20" />
+                        </Label>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+
+            <Border DockPanel.Dock="Top"  CornerRadius="15" Background="LightBlue" Margin="15" VerticalAlignment="Top">
+                <StackPanel Orientation="vertical">
+                    <WrapPanel>
+                        <Label Content="EmailType : " Height="50" FontSize="20" FontWeight="Bold" Foreground="Black" DockPanel.Dock="Top"  VerticalContentAlignment="Center"/>
+                        <Label DockPanel.Dock="Top" Foreground="White" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding EmailType}" FontSize="20" />
+                        </Label>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+
+            <Border DockPanel.Dock="Top"  CornerRadius="15" Background="LightBlue" Margin="15" VerticalAlignment="Top">
+                <StackPanel Orientation="vertical">
+                    <WrapPanel>
+                        <Label Content="Sender : " Height="50" FontSize="20" FontWeight="Bold" Foreground="Black" DockPanel.Dock="Top"  VerticalContentAlignment="Center"/>
+                        <Label DockPanel.Dock="Top" Foreground="White" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Sender}" FontSize="20" />
+                        </Label>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+        </DockPanel>
+
+        <DockPanel  Grid.Column="1" Margin="5 5 5 5">
+            <Border DockPanel.Dock="Top"  CornerRadius="15" Background="LightBlue" Margin="15" VerticalAlignment="Top">
+                <StackPanel Orientation="vertical">
+                    <WrapPanel>
+                        <Label Content="Quarantine list : " Height="50" FontSize="20" FontWeight="Bold" Foreground="Black" DockPanel.Dock="Top"  VerticalContentAlignment="Center"/>
+                        <Label DockPanel.Dock="Top" Foreground="White" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding URL}" FontSize="20" />
+                        </Label>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+
+            <Border DockPanel.Dock="Top"  CornerRadius="15" Background="LightBlue" Margin="15" VerticalAlignment="Top">
+                <StackPanel Orientation="vertical">
+                    <WrapPanel>
+                        <Label Content="Content : " Height="50" FontSize="20" FontWeight="Bold" Foreground="Black" DockPanel.Dock="Top"  VerticalContentAlignment="Center"/>
+                        <Label DockPanel.Dock="Top" Foreground="White" VerticalContentAlignment="Center">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Content}" FontSize="20" />
+                        </Label>
+                    </WrapPanel>
+                </StackPanel>
+            </Border>
+        </DockPanel>
+    </Grid>
+</UserControl>
